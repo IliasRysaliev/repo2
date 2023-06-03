@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  PROJECT_ID: fine-effect-382702
+  PROJECT_ID: extreme-world-382815
   GAR_LOCATION: us-central1
   REPOSITORY: proj-store-app-repo
   IMAGE: proj-img
