@@ -2,6 +2,8 @@ name: Build and Push Docker image to GAR
 
 on:
   push:
+    branches:
+      - main
 
 env:
   PROJECT_ID: extreme-world-382815
@@ -17,13 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0.2.0
-        with:
-          project_id: ${{ env.PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY_PROJ }}
-          export_default_credentials: true
 
       - name: "Docker build"
         run: |-
